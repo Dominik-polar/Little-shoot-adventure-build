@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunRotation : MonoBehaviour
 {
 
-    private void FixedUpdate()
+    private void Update()
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         difference.Normalize();

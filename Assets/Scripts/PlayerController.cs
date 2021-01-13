@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool FacingRight = true;
 
+
     private string currentAnimaton;
     const string PLAYER_IDLE = "Player_Idle";
     const string PLAYER_WALK = "Player_Walk";
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+  
     }
 
     void Update()
@@ -58,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Debug.Log("Invisible man");
+        Debug.Log("You died");
         SceneManager.LoadScene("GameOver");
     }
 
@@ -70,4 +72,5 @@ public class PlayerController : MonoBehaviour
         animator.Play(newAnimation);
         currentAnimaton = newAnimation;
     }
+
 }
