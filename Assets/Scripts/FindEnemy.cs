@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class FindEnemy : MonoBehaviour
 {
-    void Start()
+    private GameObject[] gameObjects;
+    void Update()
     {
-        GameObject[] gameObjects;
         gameObjects = GameObject.FindGameObjectsWithTag("Enemy");
+        Invoke("DestroyDoor", 1.0f);
+    }
 
+    void DestroyDoor()
+    {
         if (gameObjects.Length == 0)
         {
             Debug.Log("No game objects are tagged with 'Enemy'. Opening door");
-
+            Destroy(gameObject);
         }
     }
-
 }

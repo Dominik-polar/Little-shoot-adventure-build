@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - Bullet
   - EnemyBullet
+  - SpawnPoint
+  - Rooms
   layers:
   - Default
   - TransparentFX
