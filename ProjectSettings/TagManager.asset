@@ -10,6 +10,8 @@ TagManager:
   - EnemyBullet
   - SpawnPoint
   - Rooms
+  - Portal
+  - Score
   layers:
   - Default
   - TransparentFX
