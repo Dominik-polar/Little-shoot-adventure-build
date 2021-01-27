@@ -7,7 +7,14 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("StartScene");
+        if (PlayerPrefs.GetInt("Deaths") == 0)
+        {
+            SceneManager.LoadScene("StartScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("AgainScene");
+        }
     }
     public void QuitGame()
     {

@@ -164,13 +164,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9b8433a08e35e4fa50a029b433656c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 3.5
   maxHealth: 2
   currentHealth: 0
   enemy: {fileID: 1288833141033372906}
   deathEffect: {fileID: 3474156553072057722, guid: 9f3e5c615ff914c4aa28afc0c78490da,
     type: 3}
-  stoppingDistance: 4
+  stoppingDistance: 6
   timer: 2
   bullet: {fileID: 5467294445753478461, guid: 3e8a34909449d4b4884d06bd487dfb2d, type: 3}
   text: {fileID: 0}

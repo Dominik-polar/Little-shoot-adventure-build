@@ -682,7 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8113208, g: 0.14925243, b: 0.14925243, a: 1}
+  m_Color: {r: 0.9716981, g: 0.27959237, b: 0.27959237, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1142,6 +1142,9 @@ MonoBehaviour:
   deathEffect: {fileID: 5209110736082826299, guid: 67aaa671eb02be04d9684922a07a0923,
     type: 3}
   playerTrigger: {fileID: 755451863}
+  count: {fileID: 482127932}
+  highscore: 0
+  deaths: 0
 --- !u!114 &755451860
 MonoBehaviour:
   m_ObjectHideFlags: 0

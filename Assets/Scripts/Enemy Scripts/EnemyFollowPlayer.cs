@@ -85,4 +85,9 @@ public class EnemyFollowPlayer : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }

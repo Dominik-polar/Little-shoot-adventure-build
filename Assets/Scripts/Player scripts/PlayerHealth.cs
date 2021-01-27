@@ -11,11 +11,18 @@ public class PlayerHealth : MonoBehaviour
     public GameObject deathEffect;
     private SpriteRenderer playerSprite;
     public Collider2D playerTrigger;
+    private PlayerScore score;
+    public GameObject count;
+    public int highscore;
+    public int deaths;
 
     void Start()
     {
         currentHealth = maxHealth;
         playerSprite = this.GetComponent<SpriteRenderer>();
+        score = count.GetComponent<PlayerScore>();
+        highscore = 0;
+        deaths = 0;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -52,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= 1;
         Debug.Log("Health decreased");
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
             Die();
         }
@@ -62,6 +69,17 @@ public class PlayerHealth : MonoBehaviour
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+
+        highscore = PlayerPrefs.GetInt("Kills") + score.killedEnemy;
+        PlayerPrefs.SetInt("Kills", highscore);
+        Debug.Log(PlayerPrefs.GetInt("Kills").ToString());
+
+        deaths++;
+        deaths = PlayerPrefs.GetInt("Deaths") + deaths;
+        PlayerPrefs.SetInt("Deaths", deaths);
+        Debug.Log(PlayerPrefs.GetInt("Deaths").ToString());
+
         SceneManager.LoadScene("GameOver");
+        
     }
 }

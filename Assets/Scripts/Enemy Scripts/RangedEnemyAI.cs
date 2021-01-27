@@ -38,17 +38,19 @@ public class RangedEnemyAI : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) < stoppingDistance)
         {
             transform.position = this.transform.position;
+
+            if (canShoot <= 0)
+            {
+                Instantiate(bullet, transform.position, Quaternion.identity);
+                canShoot = timer;
+            }
+            else
+            {
+                canShoot -= Time.deltaTime;
+            }
         }
 
-        if(canShoot <= 0)
-        {
-            Instantiate(bullet, transform.position, Quaternion.identity);
-            canShoot = timer;
-        }
-        else
-        {
-            canShoot -= Time.deltaTime;
-        }
+        
 
     }
 
@@ -101,5 +103,12 @@ public class RangedEnemyAI : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
+
 }
 
