@@ -874,8 +874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 727022552}
   dialogSentences:
-  - 'Stranger: Hello I am Marco, your new master.'
-  - 'Marco: So you want to become adventurer, huh?'
+  - 'Stranger: Hello I am Marco. Who are you?'
+  - 'Marco: Ah so you want to become adventurer, huh?'
   - 'Marco: Okay then. I will create a dungeon to train you.'
   - 'Marco:  Your goal is to find the exit. '
   - 'Marco:  Be careful I will create some monsters that will want to kill you.'

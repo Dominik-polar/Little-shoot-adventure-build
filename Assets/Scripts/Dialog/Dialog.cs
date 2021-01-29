@@ -45,7 +45,7 @@ public class Dialog : MonoBehaviour
         foreach(char letter in dialogSentences[index].ToCharArray())
         {
             textBox.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.01f);
         }
 
 
