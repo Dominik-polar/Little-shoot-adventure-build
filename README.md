@@ -18,7 +18,7 @@ Project is created with:
 * Unity 
 	
 ## Setup
-To run this project, download unity build and run it with unity or simply go and play in the [website](https://dominik-polar.github.io/Little-shoot-adventure/) (play in fullscreen)
+To run this project, download unity build and run it with unity or simply go and play it on the [website](https://dominik-polar.github.io/Little-shoot-adventure/) (play in fullscreen)
 
 ## Screenshots
 
